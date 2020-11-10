@@ -1,0 +1,11 @@
+<h1>Welcome, all!</h1>
+
+<ul>
+  <% @tasks.each do |task| %>
+  <li>
+    <%= task.title %>
+    <%= link_to 'delete', task, method: :delete, data: { confirm: "Are you sure?"} %>
+  </li>
+
+  <% end %>
+</ul>
